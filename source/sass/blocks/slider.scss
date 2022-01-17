@@ -1,0 +1,306 @@
+.slider {
+    width: 100%;
+    padding-bottom: 100px;
+}
+
+.slider__list {
+    position: relative;
+    margin-top: 116px;
+}
+
+.slider__list-item {
+    position: relative; 
+    margin: 0 30px;
+    min-height: 747px;
+    background-color: $white;
+    border-radius: 40px;
+    padding: 85px 0;
+
+    @media (max-width: 1450px) {
+        padding: 85px 20px;
+    }
+    
+    @media (max-width: 767px) {
+        padding: 40px 20px;
+        margin: 0 10px;
+    }
+}
+
+.slider__heading {
+    font-style: normal;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1196px;
+    font-weight: 750;
+    font-size: 46px;
+    line-height: 130%;
+    color: $btn;
+    margin-bottom: 38px;
+    
+    @media (max-width: 1300px) {
+        text-align: center;
+    }
+
+    @media (max-width: 767px) {
+        font-size: 18px;
+    }
+}
+
+.slider__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1196px;
+    
+    @media (max-width: 1300px) {
+        flex-direction: column;
+    }
+}
+
+.slider__flex-box {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    @media (max-width: 1023px) {
+        & > img {
+            display: block;
+            margin: 0 auto;
+            width: 560px;
+        }
+    }
+    
+    @media (max-width: 767px) {
+        & > img {
+            display: block;
+            margin: 0 auto;
+            width: 100px;
+        }
+    }
+}
+
+.slider__text {
+    margin-top: 30px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 150%;
+    color: $btn;
+    width: 100%;
+    max-width: 756px;
+
+    @media (max-width: 1300px) {
+        text-align: center;
+        width: 100%;
+        max-width: none;
+    }
+
+    @media (max-width: 767px) {
+        font-size: 14px;
+    }
+}
+
+.slider__form {
+    width: 100%;
+    max-width: 310px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    @media (max-width: 1300px) {
+        margin: 20px auto 0;
+    }
+}
+
+.slider__form-login, .slider__form-password {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    & > input {
+        width: 100%;
+        min-height: 50px;
+        padding: 0 20px;
+        outline: none;
+        border-radius: 3px;
+        border: 1px solid $input-border;
+        font-family: 'Avenir', 'Arial', sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        color: $black;
+
+        &:hover, &:focus {
+            border: 1px solid $dark-blue;
+        }
+    }
+
+    & > label {
+        margin-bottom: 7px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        color: $btn;
+    }
+}
+
+.slider__btn-reg {
+    width: 100%;
+    min-height: 50px;
+    cursor: pointer;
+    border-radius: 3px;
+    background-color: $back-btn;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Avenir', 'Arial', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: $white-blue;
+    margin-top: 38px;
+    border: none;
+
+    &:hover {
+        background-color: $dark-blue;
+        color: $white;
+    }
+
+    &:active {
+        background-color: $back-btn;
+        color: $white-blue;
+    }
+}
+
+.slider__btn-enter {
+    width: 100%;
+    min-height: 50px;
+    cursor: pointer;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Avenir', 'Arial', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    background-color: $white-blue;
+    color: $white;
+    margin-top: 10px;
+    border: none;
+
+    &:hover {
+        background-color: $dark-blue;
+        color: $white;
+    }
+
+    &:active {
+        background-color: $white-blue;
+        color: $white;
+    }
+}
+
+.slider__form-password {
+    margin-top: 24px;
+}
+
+.slider__forgot-password {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: $btn;
+    line-height: 17px;
+
+    &:hover {
+        color: $white-blue;
+    }
+
+    &:active {
+        color: $btn;
+    }
+}
+
+/* Ограничивающая оболочка */
+.slick-list {
+    overflow: hidden;
+}
+/* Стрелка */
+.slick-arrow{
+    cursor: pointer;
+    font-size: 0;
+    width: 46px;
+    height: 86px;
+    background-color: transparent;
+    border: none;
+    background-image: url('../img/arrow.svg');
+    background-repeat: no-repeat;
+
+    @media (max-width: 1023px) {
+        display: none;
+    }
+}
+/* Стрелка влево */
+.slick-arrow.slick-prev{
+    position: absolute;
+    z-index: 10;
+    top: 40%;
+    left: 4%;
+
+    &:hover {
+        transform: rotate(180deg);
+        background-image: url('../img/arrow-hover.svg');
+    }
+}
+/* Стрелка вправо */
+.slick-arrow.slick-next{
+    position: absolute;
+    z-index: 10;
+    top: 40%;
+    right: 5%;
+    transform: rotate(180deg);
+
+    &:hover {
+        transform: rotate(360deg);
+        background-image: url('../img/arrow-hover.svg');
+    }
+}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled{}
+/* Точки (булиты) */
+.slick-dots{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 55px;
+    width: 100%;
+    max-width: 70px;
+}
+.slick-dots li{}
+/* Активная точка */
+.slick-dots li.slick-active{
+    background-color: $white;
+    margin-top: 9px;
+    font-size: 0;
+    width: 14px;
+    height: 14px;
+    border-radius: 20px;
+}
+/* Элемент точки */
+.slick-dots li button{
+    font-size: 0;
+    width: 14px;
+    height: 14px;
+    border-radius: 20px;
+    background-color: transparent;
+    border: 2px solid rgba($white, 0.3);
+
+}
